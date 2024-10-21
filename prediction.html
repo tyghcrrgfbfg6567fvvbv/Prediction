@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raja Luck Prediction</title>
+    <title>Prediction Page - Raja Luck</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="prediction-page">
-        <h1>Raja Luck Prediction</h1>
-        <div class="prediction-box">
-            <div class="prediction-item">
-                <span>Size:</span>
-                <div id="size-box" class="box"></div>
-            </div>
-            <div class="prediction-item">
-                <span>Number:</span>
-                <div id="number-box" class="box"></div>
-            </div>
-            <div class="prediction-item">
-                <span>Color:</span>
-                <div id="color-box" class="box"></div>
-            </div>
-        </div>
-        <p id="timer">Refreshing in 30s...</p>
+    <!-- Timer Section -->
+    <div class="timer-container">
+        <h2>Time of Purchase</h2>
+        <div id="countdown" class="countdown">00:30</div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Purchase Number Section -->
+    <div class="purchase-number-container">
+        <h2>Purchase Number</h2>
+        <div id="purchase-number" class="purchase-number">xxxxxxxxx</div>
+    </div>
+
+    <!-- Random Outcome Section -->
+    <div class="outcome-container">
+        <div class="random-value" id="random-value">Random Value</div>
+        <div class="big-small" id="big-small">Big/Small</div>
+        <div class="color-box" id="color-box">Color</div>
+    </div>
+
+    <script src="prediction.js"></script>
 </body>
 </html>
