@@ -1,0 +1,57 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ff5e62; /* same background color as the image */
+}
+
+/* Timer Styling */
+.timer-container, .purchase-number-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.countdown, .purchase-number {
+    font-size: 48px;
+    color: #ff5e62; /* Matches the color of the timer digits */
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Outcome Styling */
+.outcome-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.random-value, .big-small, .color-box {
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    background-color: #ff5e62; /* matching background */
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+}
