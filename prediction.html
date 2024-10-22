@@ -6,11 +6,125 @@
     <title>Prediction Page - Raja Luck</title>
     <link rel="stylesheet" href="prediction.css">
 </head>
+
+
+
+
+
+
+
+
+ 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f15b5b; /* Red background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .timer-wrapper {
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .digit {
+            background-color: white;
+            color: #f15b5b;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            width: 40px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .colon {
+            font-size: 40px;
+            color: white;
+            margin: 0 5px;
+        }
+
+        .cut-top {
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+        }
+
+        .cut-bottom {
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+  
+
+  <script>
+    let countdownTime = 17; // Initial countdown time in seconds
+
+    const minutesFirstElement = document.getElementById('minutes-first');
+    const minutesSecondElement = document.getElementById('minutes-second');
+    const secondsFirstElement = document.getElementById('seconds-first');
+    const secondsSecondElement = document.getElementById('seconds-second');
+
+    function updateTimer() {
+        let minutes = Math.floor(countdownTime / 60);
+        let seconds = countdownTime % 60;
+
+        // Split digits for minutes and seconds
+        let minutesFirst = Math.floor(minutes / 10);
+        let minutesSecond = minutes % 10;
+        let secondsFirst = Math.floor(seconds / 10);
+        let secondsSecond = seconds % 10;
+
+        // Update HTML elements
+        minutesFirstElement.textContent = minutesFirst;
+        minutesSecondElement.textContent = minutesSecond;
+        secondsFirstElement.textContent = secondsFirst;
+        secondsSecondElement.textContent = secondsSecond;
+
+        if (countdownTime > 0) {
+            countdownTime--;
+        }
+    }
+
+    // Update the timer every second
+    setInterval(updateTimer, 1000);
+
+    // Initialize the timer display
+    updateTimer();
+  </script>
 <body>
     <!-- Timer Section -->
-    <div class="timer-container">
-        <h2>Time of Purchase</h2>
-        <div id="countdown" class="countdown">00:30</div>
+    <div class="timer-wrapper">
+    <div class="title">time of purchase</div>
+    <div class="timer">
+      <div class="digit cut-top" id="minutes-first">0</div>
+      <div class="digit" id="minutes-second">0</div>
+      <div class="colon">:</div>
+      <div class="digit" id="seconds-first">1</div>
+      <div class="digit cut-bottom" id="seconds-second">7</div>
+    </div>
     </div>
 
     <!-- Purchase Number Section -->
